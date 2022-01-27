@@ -1,0 +1,7 @@
+
+kind: pipeline
+name: drone_test
+steps:
+  - name: echo
+    commands:
+      - echo "It is a test"
