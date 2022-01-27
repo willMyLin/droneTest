@@ -4,7 +4,7 @@ name: drone_test
 steps:
   - name: echo
     commands:
-      - echo "It is a test3"
+      - echo "It is a test4"
 trigger:
   branch:
     - main
