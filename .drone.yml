@@ -5,9 +5,9 @@ steps:
   - name: gobuild
     image: golang:1.16
     environment:
-        GOOS:linux
-        GOPROXY: https://goproxy.cn,direct
-        GOPATH: /drone/src/gopath
+       GOOS: linux
+       GOPROXY: https://goproxy.cn,direct
+       GOPATH: /drone/src/gopath
     commands:
       - go mod tidy && go mod download
       - go build -ldflags="-w -s" -o  drone_test
