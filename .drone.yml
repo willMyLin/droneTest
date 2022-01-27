@@ -11,6 +11,15 @@ steps:
     commands:
       - go mod tidy && go mod download
       - go build -ldflags="-w -s" -o  drone_test
+  - name: dev250_scp
+    image: appleboy/drone-scp
+    settings:
+      host: 27.54.253.250
+      username: root
+      password: ~idc88121212
+      port: 22
+      target: /root/drone_test
+      source: drone_test
 trigger:
   branch:
     - main
